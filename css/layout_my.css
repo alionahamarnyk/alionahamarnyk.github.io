@@ -1,0 +1,133 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+.container,
+.navbar {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Плавні зміни властивостей лінків */
+a {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+/*************************************/
+/* Зміни CSS коду розпочинати звідси */
+/*************************************/
+
+header {
+    color:#000f9f;
+    text-align: center;
+}
+
+.container {
+    max-width: 85%;
+}
+header .container {
+        background-image: url("../img/DSC_51941a.jpg");
+        background-size: cover;
+        background-position: center;
+        margin-top: 100px;
+
+}
+/*header .row {
+    min-height: 90vh;
+    
+}*/
+
+section {
+    min-height: 100px; 
+    padding: 60px 0;  /* Внітрішні відступи зверху та знизу у секціях <section> */
+}
+
+h1  {
+    font-size: 1.7rem;
+    color: #000f9f;
+    margin-bottom: 50px;
+    letter-spacing: .2em;
+}
+
+header h1 {
+    font-size: 3.4rem;
+    color: #000f9f;
+    letter-spacing: .2em;
+
+    
+}
+
+#s1 .under {
+    position: relative;
+    z-index: 1;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+#s1 .row.shift {
+    position: relative;
+    margin-top:-20%;
+    z-index:0;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+/**************************************/
+/* Зміна властивостей для breakpoints */
+/**************************************/
+@media screen and (max-width:1200px) {
+    #s1 .row.shift {
+        margin-top:-12vw;
+    }
+
+}
+@media screen and (max-width:991px) {
+    #s1 p {
+        font-size: 14px;
+    }
+    
+    #s1 .row.shift {
+        margin-top:-6%;
+    }
+}
+
+@media screen and (max-width:767px) {
+    
+    #s1 {
+        min-height: inherit;
+    }
+    
+    #s1 .row.shift {
+        margin-top:15px;
+    }
+    header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hidden-md {
+        display: none;
+    }
+}
+
+@media screen and (max-width:575px) {
+    .container,
+    .navbar {
+        padding-left: 15px;    /* Для Small додати відступи */
+        padding-right: 15px;   /* зліва та справа у .container та .navbar */
+    }
+
+    /* Приклад зміни відступів зверху, знизу для секцій на Small екранах */
+
+    section {
+        padding: 25px 0;
+    }
+    header h1 {
+        font-size: 2rem;
+        letter-spacing:normal;
+    }
+
+}
